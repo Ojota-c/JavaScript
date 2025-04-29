@@ -17,4 +17,5 @@ anoNascimento = anoAtual - idade;
 // template strings ${variavel} 
 
 console.log(` ${nome} ${sobrenome} tem ${idade} anos,pesa ${peso} kg e tem ${alturaEmM} de altura e seu IMC é de ${imc} 
+    
  ${nome} ${sobrenome} nasceu em ${anoNascimento}`)
