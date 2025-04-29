@@ -1,0 +1,1 @@
+console.log(" O IMC do", nome, sobrenome,'é', imc = peso / (altura * altura));
