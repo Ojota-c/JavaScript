@@ -20,7 +20,7 @@ if (sinal === "+") {
     } else {
         alert("Erro: Divisão por zero não é permitida.");
         resultado = "Indefinido";
-    }
+}
 } else {
     alert("Erro: Sinal inválido.");
     resultado = "Indefinido";
