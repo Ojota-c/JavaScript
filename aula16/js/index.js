@@ -1,0 +1,10 @@
+const seuNumero = Number(prompt("Digite seu número!"));
+const numeroTitulo = document.getElementById('numero-titulo');
+const texto = document.getElementById('texto');
+numeroTitulo.innerHTML = seuNumero;
+texto.innerHTML = `<p>A raiz quadrada do seu numero é:${Math.sqrt(seuNumero)} <p>`;
+texto.innerHTML += `<p>${seuNumero} é inteiro: ${Number.isInteger(seuNumero)}<p>`;
+texto.innerHTML += `<p>O seu número é NaN? ${Number.isNaN(seuNumero)}<p>`;
+texto.innerHTML += `<p>Arredondado para baixo:${Math.floor(seuNumero)}<p>`;
+texto.innerHTML += `<p>Arredondado para baixo:${Math.ceil(seuNumero)}<p>`;
+texto.innerHTML += `<p>Com duas casas decimais: ${seuNumero.toFixed(2)}<p>`; 
