@@ -11,11 +11,12 @@ function meuEscopo() {
         let altura = parseFloat(alturaInput);
         if (altura > 3) {
             altura = altura / 100;
-        }
-        if (!peso || !altura || peso <= 0 || altura <= 0) {
-            resultado.innerHTML = 'Por favor, preencha peso e altura corretamente.';
-            resultado.style.display = 'flex';
-            return;
+            // Verificação para altura máxima
+            if (altura >= 2.5) {
+                resultado.innerHTML = 'A altura deve ser no máximo 2.49 metros.';
+                resultado.style.display = 'flex';
+                return;
+            }
         }
         const imc2 = peso / altura ** 2;
         let resultado2 = '';
@@ -40,7 +41,7 @@ function meuEscopo() {
 
     form.addEventListener('submit', recebeEventoForm);
 
-    btnLimpar.addEventListener('click', function() {
+    btnLimpar.addEventListener('click', function () {
         form.querySelector('.peso').value = '';
         form.querySelector('.altura').value = '';
         resultado.innerHTML = '';
