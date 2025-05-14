@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans:ital@0;1&display=swap');
+:root{
+    --primary-color: #1b7383;
+    --primary-color-darker: #0a3a42;
+    --secondary-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color) ;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+}
+
+.container{
+    max-width: 640px;
+    margin: 50px auto;
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+    font-size: 24px;
+    height: 40px;
+    padding: 0 20px;
+    
+}
+
+form input:focus{
+    outline: 1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 25px;
+
+}
+
+form button:hover{
+    background: var(--primary-color-darker);
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7em;
+    margin-bottom: 20px;
+}
+
+p{
+    font-family: 'Open sans', sans-serif;
+    font-size: 1em;
+    margin-bottom: 0.5px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-right {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.resultado {
+    display: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    min-height: 40px;
+    align-items: center;
+}

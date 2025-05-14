@@ -1,0 +1,50 @@
+function meuEscopo() {
+    const form = document.querySelector('.form');
+    const resultado = document.querySelector('.resultado');
+    const btnLimpar = document.getElementById('limpar');
+
+    function recebeEventoForm(evento) {
+        evento.preventDefault();
+
+        const peso = parseFloat(form.querySelector('.peso').value);
+        const alturaInput = form.querySelector('.altura').value.replace(',', '.');
+        let altura = parseFloat(alturaInput);
+        if (altura > 3) {
+            altura = altura / 100;
+        }
+        if (!peso || !altura || peso <= 0 || altura <= 0) {
+            resultado.innerHTML = 'Por favor, preencha peso e altura corretamente.';
+            resultado.style.display = 'flex';
+            return;
+        }
+        const imc2 = peso / altura ** 2;
+        let resultado2 = '';
+
+        if (imc2 <= 18.5) {
+            resultado2 = `Abaixo do peso!`
+        } else if (imc2 >= 18.5 && imc2 <= 24.9) {
+            resultado2 = `Peso normal`
+        } else if (imc2 >= 25 && imc2 <= 29.9) {
+            resultado2 = `Sobrepeso`
+        } else if (imc2 >= 30 && imc2 <= 34.9) {
+            resultado2 = `Obesidade grau 1`
+        } else if (imc2 >= 35 && imc2 <= 39.9) {
+            resultado2 = `Obesidade grau 2`
+        } else if (imc2 >= 40) {
+            resultado2 = `Obesidade grau 3`
+        }
+
+        resultado.innerHTML = `Seu IMC é ${imc2.toFixed(2)} (${resultado2})`;
+        resultado.style.display = 'flex';
+    }
+
+    form.addEventListener('submit', recebeEventoForm);
+
+    btnLimpar.addEventListener('click', function() {
+        form.querySelector('.peso').value = '';
+        form.querySelector('.altura').value = '';
+        resultado.innerHTML = '';
+        resultado.style.display = 'none';
+    });
+}
+meuEscopo();
