@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogio</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <section class="container"">
+       <div>Calendário do Jota.C</div>
+       <form class=" form" action="">
+        <label for="input-test-1">Dia da Semana</label>
+        <input type="text" id="DiaDaSemana" class="DiaDaSemana" disabled>
+        <label for="input-test-1">Dia</label>
+        <input type="text" id="Dia" class="Dia" disabled>
+        <label for="input-test-1">Mês</label>
+        <input type="text" id="Mes" class="Mes" disabled>
+        <label for="input-test-1">Ano</label>
+        <input type="text" id="Ano" class="Ano" disabled>
+        <label for="input-test-1">Horario</label>
+        <input type="text" id="Relogio" class="Horario" disabled>
+
+        <form>
+            
+        <button id="btn-Calendario">Abrir/Fechar Calendário</button>
+        <button id="btn-Relogio">Abrir/Fechar Relógio</button>
+        <section class="calendario" id="section-calendario" style="display: none;">
+            <div>Calendário</div>
+            <div class="calendario" id="calendario"></div>
+        </section>
+
+        <section class="Relogio" id="section-relogio" style="display: none;">
+            <div>Relógio</div>
+            <input type="text" class="Horario2" readonly>
+        </section>
+    </section>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
