@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans:ital@0;1&display=swap');
+:root{
+    --primary-color: #1b835b;
+    --primary-color-darker: #0a3a42;
+    --secondary-color: #fff;
+    --erro-color: #cf3838;
+    --resultado-color:#409faf;
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color) ;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+
+}
+
+.container{
+    max-width: 600px;
+    margin: 50px auto;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 10px;
+       
+}
